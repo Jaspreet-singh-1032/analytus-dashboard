@@ -1,14 +1,39 @@
 .container {
-  padding: 0 2rem;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  box-sizing: border-box;
+  background-color: rebeccapurple;
 }
 
-.main {
-  min-height: 100vh;
+.column {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: red;
 }
 
-.header {
-  padding: 1rem 0;
-  text-align: center;
+#left {
+  flex-shrink: 0;
+}
+
+.topLeft {
+  flex-shrink: 0;
+  display: flex;
+  background-color: rosybrown;
+}
+
+.topRight {
+  flex-shrink: 0;
+  display: flex;
+}
+
+.ul {
+  list-style: none;
+}
+
+.bottom {
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: pink;
 }

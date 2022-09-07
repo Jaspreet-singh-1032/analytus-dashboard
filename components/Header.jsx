@@ -1,9 +1,9 @@
 import React from "react";
-
+import styles from "../styles/Header.module.css";
 import { BRAND_NAME } from "../constants";
 
 const Header = () => {
-  return <div>{BRAND_NAME}</div>;
+  return <div className={styles.header}> {BRAND_NAME}</div>;
 };
 
 export default Header;
