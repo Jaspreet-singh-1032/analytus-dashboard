@@ -6,14 +6,5 @@ import { BRAND_NAME } from "../constants";
 import AppLayout from "../layouts/AppLayout";
 
 export default function Home() {
-  return (
-    <div>
-      <Head>
-        <title>{BRAND_NAME}</title>
-        <meta name="description" content={BRAND_NAME} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <AppLayout>main</AppLayout>
-    </div>
-  );
+  return <AppLayout>main</AppLayout>;
 }
