@@ -1,8 +1,10 @@
+import { useRouter } from "next/router";
 import {
   PieChartOutlined,
   BarChartOutlined,
   FunnelPlotOutlined,
   OrderedListOutlined,
+  HomeOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
 import { Typography } from "antd";
@@ -21,14 +23,16 @@ function getItem(label, key, icon, children) {
 }
 
 const items = [
-  getItem("List", "1", <OrderedListOutlined />),
-  getItem("Pie", "2", <PieChartOutlined />),
-  getItem("Bar", "sub1", <BarChartOutlined />),
-  getItem("Funnels", "sub2", <FunnelPlotOutlined />),
+  getItem("Home", "/", <HomeOutlined />),
+  getItem("List", "list", <OrderedListOutlined />),
+  getItem("Pie", "pie", <PieChartOutlined />),
+  getItem("Bar", "bar", <BarChartOutlined />),
+  getItem("Funnels", "funnel", <FunnelPlotOutlined />),
 ];
 
 const AppLayout = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
+  const router = useRouter();
   return (
     <Layout
       style={{
@@ -46,6 +50,7 @@ const AppLayout = ({ children }) => {
           defaultSelectedKeys={["1"]}
           mode="inline"
           items={items}
+          onSelect={(e) => router.push(e.key)}
         />
       </Sider>
       <Layout className="site-layout">

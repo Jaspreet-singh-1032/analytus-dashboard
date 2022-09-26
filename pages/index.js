@@ -1,10 +1,6 @@
-import Head from "next/head";
-
-import { BRAND_NAME } from "../constants";
-
 // components imports
-import AppLayout from "../layouts/AppLayout";
+import LineChartV1 from "../charts/LineChartV1";
 
 export default function Home() {
-  return <AppLayout>main</AppLayout>;
+  return <LineChartV1 />;
 }
